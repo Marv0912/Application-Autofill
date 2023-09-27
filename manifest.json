@@ -1,0 +1,35 @@
+{
+    "name": "Job Application Autofill",
+    "version": "1.0",
+    "description": "Autofills job application forms.",
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://*.youtube.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_icon": {
+            "16": "assets/ext-icon.png",
+            "24": "assets/ext-icon.png",
+            "32": "assets/ext-icon.png"
+        },
+        "default_title": "Job Application Autofill",
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}
