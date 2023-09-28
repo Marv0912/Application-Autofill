@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Application Autofill</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="popup.css">
 </head>
+
 <body>
     <h3>Application Autofill Extension</h3>
-    <input type="text" id="fullName" placeholder="Full Name" >
-    <input type="text" id="firstName" placeholder="First Name" >
-    <input type="text" id="lastName" placeholder="Last Name" >
-    <input type="text" id="email" placeholder="Email" >
-    <input type="text" id="phone number" placeholder="Phone Number" >
-    <input type="text" id="address" placeholder="Address" >
-    <input type="text" id="state" placeholder="State" >
-    <input type="text" id="city" placeholder="City" >
-    <input type="text" id="zipCode" placeholder="Zip Code" >
-    <input type="text" id="" placeholder="" >
+    <input type="text" class="label is-small" id="fullName" placeholder="Full Name">
+    <input type="text" class="label is-small" id="firstName" placeholder="First Name">
+    <input type="text" class="label is-small" id="lastName" placeholder="Last Name">
+    <input type="text" class="label is-small" id="email" placeholder="Email">
+    <input type="text" class="label is-small" id="phoneNumber" placeholder="Phone Number">
+    <input type="text" class="label is-small" id="address" placeholder="Address">
+    <input type="text" class="label is-small" id="city" placeholder="City">
+    <input type="text" class="label is-small" id="state" placeholder="State">
+    <input type="text" class="label is-small" id="zipCode" placeholder="Zip Code">
+    <!-- Testing file upload -->
+    <!-- <div class="file is-small">
+        <label class="file-label">
+            <input class="file-input" type="file" name="resume">
+            <span class="file-cta">
+                <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                    <img src="assets/diskette.png" alt="">
+                </span>
+                <span class="file-label">
+                    Resume
+                </span>
+            </span>
+        </label>
+    </div> -->
+   <button class="button is-small is-rounded" id="saveBtn" type="submit" value="submit input" >Save</button>
 
-    <button id="saveBtn"> Save </button>
+
+    <!-- <progress class="progress is-small is-dark" max="10">10%</progress> -->
 
     <script src="popup.js"></script>
 </body>
+
 </html>
