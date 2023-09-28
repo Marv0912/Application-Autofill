@@ -24,9 +24,8 @@
     ],
     "action": {
         "default_icon": {
-            "16": "assets/ext-icon.png",
-            "24": "assets/ext-icon.png",
-            "32": "assets/ext-icon.png"
+            "64": "assets/edit.png",
+            "128": "assets/diskette.png"
         },
         "default_title": "Job Application Autofill",
         "default_popup": "popup.html"
