@@ -4,10 +4,8 @@
     "description": "Autofills job application forms.",
     "permissions": [
         "storage",
-        "activeTab"
-    ],
-    "host_permissions": [
-        "https://*.youtube.com/*"
+        "activeTab",
+        "scripting"
     ],
     "background": {
         "service_worker": "background.js"
