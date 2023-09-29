@@ -1,6 +1,7 @@
 chrome.storage.local.get('userData', function(data) {
     let userData = data.userData;
     if (userData) {
+        console.log(userData);
 
         let fieldMapping = {
             'fullName':'fullName',
@@ -15,7 +16,7 @@ chrome.storage.local.get('userData', function(data) {
         }
 
         for (let field in fieldMapping) {
-            let inputElement = document.querySelector('input[name"${field}');
+            let inputElement = document.querySelector(`input[name"${field}`);
             if (inputElement && userData[fieldMapping[field]]) {
                 inputElement.value = userData[fieldMapping[field]];
             }
