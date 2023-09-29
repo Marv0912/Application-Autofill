@@ -18,8 +18,13 @@ chrome.storage.local.get('userData', function(data) {
         for (let field in fieldMapping) {
             let inputElement = document.querySelector(`input[name"${field}`);
             if (inputElement && userData[fieldMapping[field]]) {
+                console.log(`Filling field ${field} with value ${userData[fieldMapping[field]]}`);
                 inputElement.value = userData[fieldMapping[field]];
+            } else if (inputElement) {
+                console.log(`Field ${field} detected, but no data to fill. `);
+            } else {
+                console.log(`Field ${field} not detected`);
             }
         }
     }
-})
+});

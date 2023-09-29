@@ -1,4 +1,4 @@
-document.getElementById('saveBtn').addEventListener('click', function() {
+document.getElementById('saveBtn').addEventListener('click', function () {
     // get all the userData when the save button is clicked 
     let userData = {
         fullName: document.getElementById('fullName').value,
@@ -14,15 +14,12 @@ document.getElementById('saveBtn').addEventListener('click', function() {
 
     };
 
-    chrome.storage.local.set({userData: userData});
+    chrome.storage.local.set({ userData: userData });
 })
 
-document.getElementById('autofillBtn').addEventListener('click', function() {
-    chrome.tabs.query({active:true, currentWindow: true}, function(tabs) {
+document.getElementById('autofillBtn').addEventListener('click', function () {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         let activeTab = tabs[0];
-        chrome.scripting.executeScript({
-            target: {tabId: activeTab.id},
-            function: autofillForm
-        });
+        chrome.runtime.sendMessage({ action: "executeScript", tabId: activeTab.id });
     });
 })
